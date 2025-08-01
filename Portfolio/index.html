@@ -1263,14 +1263,30 @@
                   <h2 data-wow-delay="0.3s" class="section-title wow fadeInUp"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                     Portfolio </h2>
-                  <div class="portfolio-container">
-    <iframe 
-        src="https://www.behance.net/sjdesigner4341" 
-        width="600" 
-        height="400" 
-        style="border:none;">
-    </iframe>
-  </div>
+                  <div id="portfolio-container"></div>
+</section>
+
+<script>
+  const username = "YOUR_USERNAME";
+  const apiKey = "YOUR_API_KEY";
+
+  fetch(`https://www.behance.net/sjdesigner4341`)
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById('portfolio-container');
+      data.projects.forEach(project => {
+        const projectDiv = document.createElement('div');
+        projectDiv.innerHTML = `
+          <a href="${project.url}" target="_blank">
+            <img src="${project.covers[230]}" alt="${project.name}" style="width:200px;">
+          </a>
+          <p>${project.name}</p>
+        `;
+        container.appendChild(projectDiv);
+      });
+    })
+    .catch(err => console.error(err));
+</script>
 
                   
                 </div>
@@ -2398,4 +2414,5 @@
 <!-- Mirrored from gerold.themejunction.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Sep 2024 14:28:19 GMT -->
 
 </html>
+
 
