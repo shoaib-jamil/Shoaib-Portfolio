@@ -169,4 +169,10 @@ form.submitting .wpcf7-spinner {
 
 .wpcf7-reflection > output[hidden] {
 	display: none;
+
+}
+.portfolio-container iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
 }
