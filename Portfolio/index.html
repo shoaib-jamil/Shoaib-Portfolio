@@ -1259,19 +1259,15 @@
               data-id="9e735d6" data-element_type="widget" data-widget_type="tj-section-title.default">
               <div class="elementor-widget-container">
 
-                <div class="section-header">
-                  <h2 data-wow-delay="0.3s" class="section-title wow fadeInUp"
-                    style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                    Portfolio </h2>
-                  
-                   <section id="portfolio">
+                <div
+                  <section id="portfolio">
   <h2>My Behance Portfolio</h2>
   <div id="portfolio-container" style="display:flex;flex-wrap:wrap;gap:20px;"></div>
 </section>
 
 <script>
   // Load projects from JSON
-  fetch("project.json")
+  fetch("projects.json")
     .then(response => response.json())
     .then(projects => {
       const container = document.getElementById("portfolio-container");
@@ -1279,16 +1275,17 @@
         const div = document.createElement("div");
         div.style.width = "200px";
         div.innerHTML = `
-          <a href="${https://www.behance.net/gallery/218759087/Creative-Post-Hiring-post}" target="_blank">
-            <img src="${office.png}" style="width:100%;border-radius:8px;">
+          <a href="${project.url}" target="_blank">
+            <img src="${project.image}" style="width:100%;border-radius:8px;">
           </a>
-          <p>${janioooy}</p>
+          <p>${project.title}</p>
         `;
         container.appendChild(div);
       });
     })
     .catch(err => console.error(err));
 </script>
+
 
 
                   
@@ -2420,6 +2417,7 @@
 <!-- Mirrored from gerold.themejunction.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Sep 2024 14:28:19 GMT -->
 
 </html>
+
 
 
 
