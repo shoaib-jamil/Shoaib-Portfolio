@@ -1259,40 +1259,11 @@
               data-id="9e735d6" data-element_type="widget" data-widget_type="tj-section-title.default">
               <div class="elementor-widget-container">
 
-                <div
-                  <section id="portfolio" style="padding:20px;">
-  <h2>My Behance Portfolio</h2>
-  <div id="portfolio-container" style="
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    justify-content:flex-start;
-  "></div>
-</section>
-
-<script>
-  fetch("projects.json")
-    .then(response => response.json())
-    .then(projects => {
-      const container = document.getElementById("portfolio-container");
-      projects.forEach(project => {
-        const div = document.createElement("div");
-        div.style.width = "220px";
-        div.style.textAlign = "center";
-        div.innerHTML = `
-          <a href="${https://www.behance.net/gallery/123456789/Modern-UI-Design}" target="_blank">
-            <img src="${images/ui-design.jpg}" 
-                 style="width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-          </a>
-          <p style="margin-top:8px;font-family:sans-serif;font-size:16px;">${project.title}</p>
-        `;
-        container.appendChild(div);
-      });
-    })
-    .catch(err => console.error("Error loading projects.json:", err));
-</script>
-
-
+                <div class="section-header">
+                  <h2 data-wow-delay="0.3s" class="section-title wow fadeInUp"
+                    style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                    Portfolio </h2>
+                  
                   
 
                   
@@ -2422,6 +2393,7 @@
 <!-- Mirrored from gerold.themejunction.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Sep 2024 14:28:19 GMT -->
 
 </html>
+
 
 
 
