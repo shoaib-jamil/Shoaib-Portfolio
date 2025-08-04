@@ -719,7 +719,7 @@
                 <a title="Services" href="#services" class="nav-links">Services</a></li>
               <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-553"
                 class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item active menu-item-553 nav-item">
-                <a title="Works" href="#works" class="nav-links">Portfolio</a></li>
+                <a title="Works" href="#works" class="nav-links"></a></li>
               <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-554"
                 class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item active menu-item-554 nav-item">
                 <a title="Resume" href="#resume" class="nav-links">Resume</a></li>
@@ -785,7 +785,7 @@
                 <a title="Services" href="#services" class="nav-links">Services</a></li>
               <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
                 class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item active menu-item-553 nav-item">
-                <a title="Works" href="#works" class="nav-links">Portfolio</a></li>
+                <a title="Works" href="#works" class="nav-links"></a></li>
               <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"
                 class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item active menu-item-554 nav-item">
                 <a title="Resume" href="#resume" class="nav-links">Resume</a></li>
@@ -1263,30 +1263,7 @@
                   <h2 data-wow-delay="0.3s" class="section-title wow fadeInUp"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                     Portfolio </h2>
-                  <div id="portfolio-container"></div>
-</section>
-
-<script>
-  const username = "YOUR_USERNAME";
-  const apiKey = "YOUR_API_KEY";
-
-  fetch(`https://www.behance.net/sjdesigner4341${username}/projects?client_id=${apiKey`)
-    .then(response => response.json())
-    .then(data => {
-      const container = document.getElementById('portfolio-container');
-      data.projects.forEach(project => {
-        const projectDiv = document.createElement('div');
-        projectDiv.innerHTML = `
-          <a href="${project.url}" target="_blank">
-            <img src="${project.covers[230]}" alt="${project.name}" style="width:200px;">
-          </a>
-          <p>${project.name}</p>
-        `;
-        container.appendChild(projectDiv);
-      });
-    })
-    .catch(err => console.error(err));
-</script>
+           
 
                   
                 </div>
@@ -2414,6 +2391,7 @@
 <!-- Mirrored from gerold.themejunction.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Sep 2024 14:28:19 GMT -->
 
 </html>
+
 
 
 
